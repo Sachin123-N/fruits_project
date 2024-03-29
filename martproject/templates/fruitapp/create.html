@@ -1,0 +1,18 @@
+{% extends 'base.html '%}
+{% block title %}
+    <title>Create page </title>
+{% endblock %}
+
+{% block content %}
+        <div class ="border border -5 col-6 m-auto mt-5 p-2">
+            <h4 class ="text-primary text-center mb-3">Order Form</h4>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type ="submit" value="Purchase" class="btn btn-primary col-5 "/>
+                <input type ="reset" value="Clear Form" class=" btn btn-warning col-5 float-end ">
+            </form>>
+        </div>
+
+{% endblock %}
+
